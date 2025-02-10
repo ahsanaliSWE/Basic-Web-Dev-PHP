@@ -1,15 +1,16 @@
 <?php
 
+	//  Tables Up To A Given Number
+
 	$limit = 3;
 
 	echo "<h1>Tables Up To A Number: $limit</h1><hr>";
-	
-	$product = 1;
+
 	$start = 2;
 
 	do{
-		for($i = 1; $i <= 10; $i++){           /* for loop prints the tables to 10 time muiltipy */
-		    echo "$start x $i = ".$start*$i."<br>";
+		for($i = 1; $i <= 10; $i++){         /* for loop prints the tables to 10 time muiltipy */
+		    echo "$start * $i = ".$start*$i."<br>";
 		} 
 	     echo "<hr>";
 	     $start++;
