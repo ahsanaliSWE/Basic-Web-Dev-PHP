@@ -17,6 +17,22 @@
               $num2 = $num3;
 	
 	      $count++;
-	} while($count <= $limit) /* $count used for ending loop */
+	} while($count <= $limit); /* $count used for ending loop */
+	
+	echo "<hr>";
+
+	$count = 1;
+	$num1 = 0;
+	$num2 = 1;
+	$num3 = 0;
+
+	do{
+	      $num3 = $num1 + $num2;  
+ 	      echo "$num1 + $num2 = $num3<br>";
+              $num1 = $num2;	     
+              $num2 = $num3;
+	
+	      $count++;
+	} while($count <= $limit-2); 
 
 ?>
