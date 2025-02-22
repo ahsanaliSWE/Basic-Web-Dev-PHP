@@ -19,9 +19,9 @@
             <tr align="center">
                 <td colspan="2">
                     <select name="option">
-                        <option value="ceil"  <?php if($_POST['option']=="ceil") echo "selected"; ?>>Ceil</option>
-                        <option value="round" <?php if($_POST['option']=="round") echo "selected"; ?>>Round</option>
-                        <option value="floor" <?php if($_POST['option']=="floor") echo "selected"; ?>>Floor</option>
+                        <option value="ceil"  <?php if(isset($_POST['option']) && $_POST['option']=="ceil") echo "selected"; ?>>Ceil</option>
+                        <option value="round" <?php if(isset($_POST['option']) && $_POST['option']=="round") echo "selected"; ?>>Round</option>
+                        <option value="floor" <?php if(isset($_POST['option']) && $_POST['option']=="floor") echo "selected"; ?>>Floor</option>
                     </select>
                 <input type="submit" value="Process"></td>
             </tr>
