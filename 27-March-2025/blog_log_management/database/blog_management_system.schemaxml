@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemadesigner version="6.5">
+<source>
+<database charset="utf8mb4" collation="utf8mb4_general_ci">blog_management_system</database>
+</source>
+<canvas zoom="100">
+<tables>
+<table name="log" view="standard">
+<left>142</left>
+<top>45</top>
+<width>168</width>
+<height>146</height>
+<sql_create_table>CREATE TABLE `log` (
+  `log_id` int(11) NOT NULL AUTO_INCREMENT,
+  `login` datetime DEFAULT NULL,
+  `logout` datetime DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`log_id`),
+  KEY `user_id` (`user_id`),
+  CONSTRAINT `log_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci</sql_create_table>
+</table>
+<table name="posts" view="standard">
+<left>630</left>
+<top>34</top>
+<width>213</width>
+<height>163</height>
+<sql_create_table>CREATE TABLE `posts` (
+  `post_id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(50) NOT NULL,
+  `summary` varchar(200) NOT NULL,
+  `description` varchar(200) DEFAULT NULL,
+  `added_by` int(11) NOT NULL,
+  PRIMARY KEY (`post_id`),
+  KEY `added_by` (`added_by`),
+  CONSTRAINT `posts_ibfk_1` FOREIGN KEY (`added_by`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci</sql_create_table>
+</table>
+<table name="role_type" view="standard">
+<left>630</left>
+<top>369</top>
+<width>310</width>
+<height>112</height>
+<sql_create_table>CREATE TABLE `role_type` (
+  `role_type_id` int(11) NOT NULL AUTO_INCREMENT,
+  `role` enum('Admin','Editor','User') NOT NULL DEFAULT 'User',
+  PRIMARY KEY (`role_type_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci</sql_create_table>
+</table>
+<table name="user" view="standard">
+<left>333</left>
+<top>208</top>
+<width>272</width>
+<height>180</height>
+<sql_create_table>CREATE TABLE `user` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) DEFAULT NULL,
+  `email` varchar(30) DEFAULT NULL,
+  `password` varchar(50) DEFAULT NULL,
+  `gender` enum('Male','Female') DEFAULT 'Male',
+  `role_type_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`user_id`),
+  KEY `role_type` (`role_type_id`),
+  CONSTRAINT `user_ibfk_1` FOREIGN KEY (`role_type_id`) REFERENCES `role_type` (`role_type_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci</sql_create_table>
+</table>
+</tables>
+</canvas>
+</schemadesigner>
