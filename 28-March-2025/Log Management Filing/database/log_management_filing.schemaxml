@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemadesigner version="6.5">
+<source>
+<database charset="utf8mb4" collation="utf8mb4_general_ci">log_management</database>
+</source>
+<canvas zoom="100">
+<tables>
+<table name="role_type" view="standard">
+<left>207</left>
+<top>83</top>
+<width>267</width>
+<height>113</height>
+<sql_create_table>CREATE TABLE `role_type` (
+  `role_type_id` int(11) NOT NULL AUTO_INCREMENT,
+  `role` enum('Admin','User') NOT NULL DEFAULT 'User',
+  PRIMARY KEY (`role_type_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci</sql_create_table>
+</table>
+<table name="user" view="standard">
+<left>499</left>
+<top>179</top>
+<width>272</width>
+<height>180</height>
+<sql_create_table>CREATE TABLE `user` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `gender` enum('Male','Female') NOT NULL DEFAULT 'Male',
+  `role_type_id` int(11) DEFAULT 2,
+  PRIMARY KEY (`user_id`),
+  KEY `role_type_id` (`role_type_id`),
+  CONSTRAINT `user_ibfk_1` FOREIGN KEY (`role_type_id`) REFERENCES `role_type` (`role_type_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci</sql_create_table>
+</table>
+</tables>
+</canvas>
+</schemadesigner>
