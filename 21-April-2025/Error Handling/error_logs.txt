@@ -1,0 +1,83 @@
+Error Level: 1024
+Error Message: Notice Error: 
+Error File: C:\xampp\htdocs\hidaya\Assignment\21-April-2025\23598_Ahsan_Ali_error_handling\index.php
+Error Line Number: 84
+Error Time: 2025-04-21 18:37:27 pm
+
+----------------------------------------
+
+Error Level: 512
+Error Message: Warning Error: 
+Error File: C:\xampp\htdocs\hidaya\Assignment\21-April-2025\23598_Ahsan_Ali_error_handling\index.php
+Error Line Number: 85
+Error Time: 2025-04-21 18:37:57 pm
+
+----------------------------------------
+
+Error Level: 256
+Error Message: Fatal Error: 
+Error File: C:\xampp\htdocs\hidaya\Assignment\21-April-2025\23598_Ahsan_Ali_error_handling\index.php
+Error Line Number: 86
+Error Time: 2025-04-21 18:39:36 pm
+
+----------------------------------------
+
+Error Level: 256
+Error Message: Fatal Error: 
+Error File: C:\xampp\htdocs\hidaya\Assignment\21-April-2025\23598_Ahsan_Ali_error_handling\index.php
+Error Line Number: 88
+Error Time: 2025-04-21 21:40:53 pm
+
+----------------------------------------
+
+Error Level: 256
+Error Message: Fatal Error: 
+Error File: C:\xampp\htdocs\hidaya\Assignment\21-April-2025\23598_Ahsan_Ali_error_handling\index.php
+Error Line Number: 88
+Error Time: 2025-04-21 09:41:17 pm
+
+----------------------------------------
+
+Error Level: 256
+Error Message: Fatal Error: 
+Error File: C:\xampp\htdocs\hidaya\Assignment\21-April-2025\23598_Ahsan_Ali_error_handling\index.php
+Error Line Number: 94
+Error Time: 2025-04-21 09:43:54 pm
+
+----------------------------------------
+
+Error: Access denied for user 'roots'@'localhost' (using password: NO)
+Code: 1045
+File: C:\xampp\htdocs\hidaya\Assignment\21-April-2025\23598_Ahsan_Ali_error_handling\require\database_connection.php
+Line: 8
+
+----------------------------------------
+
+Error: Access denied for user 'roots'@'localhost' (using password: NO)
+Code: 1045
+File: C:\xampp\htdocs\hidaya\Assignment\21-April-2025\23598_Ahsan_Ali_error_handling\require\database_connection.php
+Line: 8
+
+----------------------------------------
+
+Error: Access denied for user 'roots'@'localhost' (using password: NO)
+Code: 1045
+File: C:\xampp\htdocs\hidaya\Assignment\21-April-2025\23598_Ahsan_Ali_error_handling\require\database_connection.php
+Line: 8
+
+----------------------------------------
+
+Error: Access denied for user 'root'@'localhost' (using password: YES)
+Code: 1045
+File: C:\xampp\htdocs\hidaya\Assignment\21-April-2025\23598_Ahsan_Ali_error_handling\require\database_connection.php
+Line: 8
+
+----------------------------------------
+
+Error: php_network_getaddresses: getaddrinfo for slocalhost failed: No such host is known. 
+Code: 2002
+File: C:\xampp\htdocs\hidaya\Assignment\21-April-2025\23598_Ahsan_Ali_error_handling\require\database_connection.php
+Line: 8
+
+----------------------------------------
+
